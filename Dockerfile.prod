@@ -1,9 +1,9 @@
-ARG PORT=6002
+ARG PORT=3000
 ARG HOST=0.0.0.0
 ARG NODE_ENV=production
 ARG VUE_APP_API_URL=http://0.0.0.0
 
-FROM node:20-alpine as build
+FROM node:22-alpine as build
 
 ENV VUE_APP_API_URL=$VUE_APP_API_URL HOST=$HOST PORT=$PORT NODE_ENV=$NODE_ENV
 
