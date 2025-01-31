@@ -1,8 +1,15 @@
-# Nuxt Minimal Starter
+# [quack-deck.info](https://quack-deck.info/)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## This project aims to be a compatibility index of all steamdeck quacked games
 
-## Setup
+This project not aims to have or encourage piracy links or another piracy source, this is only for informational purposes
+
+### Disclaimer - DeckCanQuackThis
+DeckCanQuackThis is an independent project and is not affiliated with Valve, Steam, Steam Deck, or SteamOS in any way. Our goal is to provide information to facilitate offline software installation, without relying on external platforms, aiming at digital preservation and user accessibility.
+
+All trademarks and names mentioned belong to their respective owners. The use of the information provided on this site is the sole responsibility of the user.
+
+## How to run locally
 
 Make sure to install dependencies:
 
