@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@/assets/layout/layout.scss";
+@use "@/assets/demo/demo.scss";
+@import "primeicons/primeicons.css";
+
+* {
+  font-family:
+    Comic Sans MS,
+    Comic Sans,
+    cursive;
+}
+
+body {
+  background: black !important;
+}
