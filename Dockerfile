@@ -1,0 +1,44 @@
+ARG PORT=6002
+ARG HOST=0.0.0.0
+ARG NODE_ENV=production
+ARG VUE_APP_API_URL=http://0.0.0.0
+
+FROM node:20-alpine as build
+
+ENV VUE_APP_API_URL=$VUE_APP_API_URL HOST=$HOST PORT=$PORT NODE_ENV=$NODE_ENV
+
+# update and install the latest dependencies for the alpine version
+RUN apk update && apk upgrade
+
+# set work dir as app
+WORKDIR /app
+# copy the nuxt project package json and package json lock if available
+COPY package* ./
+# install all the project npm dependencies
+RUN npm install --production=false
+# copy all other project files to working directory
+COPY . ./
+# build the nuxt project to generate the artifacts in .output directory
+RUN npx nuxt build
+
+# we are using multi stage build process to keep the image size as small as possible
+FROM node:22-alpine
+# update and install latest dependencies, add dumb-init package
+# add a non root user
+RUN apk update && apk upgrade && apk add dumb-init && adduser -D nuxtuser
+# set non root user
+USER nuxtuser
+
+# set work dir as app
+WORKDIR /app
+# copy the output directory to the /app directory from
+# build stage with proper permissions for user nuxt user
+COPY --chown=nuxtuser:nuxtuser --from=build /app/.output ./
+
+EXPOSE $PORT
+
+# set app host and port . In nuxt 3 this is based on nitro and you can read
+#more on this https://nitro.unjs.io/deploy/node#environment-variables
+# start the app with dumb init to spawn the Node.js runtime process
+# with signal support
+CMD ["dumb-init", "node", "/app/server/index.mjs"]
