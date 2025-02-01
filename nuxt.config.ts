@@ -6,25 +6,35 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@primevue/nuxt-module',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/google-adsense'
   ],
   css: [
     '~/assets/styles.scss',
     'primeicons/primeicons.css'
   ],
+  runtimeConfig: {
+    public: {
+      googleAdsense: {
+        id: process.env.GOOGLE_ADSENSE_ID,
+        test: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true',
+      },
+      // Load from environment variables with fallback to empty strings
+      appwriteUrl: process.env.APPWRITE_URL || '',
+      appwriteProjectId: process.env.APPWRITE_PROJECT_ID || '',
+    },
+  },
+  //  @ts-ignore
+  googleAdsense: {
+    onPageLoad: false,
+    pageLevelAds: false,
+  },
   primevue: {
     options: {
       theme: {
         preset: Aura
       }
     }
-  },
-  runtimeConfig: {
-    public: {
-      // Load from environment variables with fallback to empty strings
-      appwriteUrl: process.env.APPWRITE_URL || '',
-      appwriteProjectId: process.env.APPWRITE_PROJECT_ID || '',
-    },
   },
   vite: {
     css: {
