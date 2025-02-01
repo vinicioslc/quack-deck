@@ -3,9 +3,9 @@
     <div class="flex flex-column justify-content-between align-items-center m-auto text-center"
       style="max-width:900px;">
       <img alt="Can my deck quack this ?" src="/public/logo.png" class="w-6">
-      <span style="font-family: Comic Sans MS, Comic Sans, cursive; color: #eded00;" class="text-xl"> Can Deck Quack
+      <span style="color: #eded00;" class="text-xl"> Can Deck Quack
         This Game ??</span>
-      <span style="font-family: Comic Sans MS, Comic Sans, cursive; color: #eded00;" class="text-sm"> Here we index what
+      <span style="color: #eded00;" class="text-sm"> Here we index what
         quacked games run in steamos or in windows and how you can contribute <a
           href="https://github.com/vinicioslc/quack-deck">here at github <i class="pi pi-github"> </i></a> only need
         send a PR adding a .md file to folder content/games and will be included as soon as possible.</span>
