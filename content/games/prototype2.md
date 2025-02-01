@@ -9,6 +9,6 @@ compatibility:
     proton_tested: lutris-GE-Proton8-26-x86_64
 description:
 ---
-Only works at steamos if have grub patch available here [grub patch](https://github.com/pdx-rico/hogwarts-steamdeck-fix
+Only works at steamos if have grub patch available here [grub patch](https://github.com/pdx-rico/hogwarts-steamdeck-fix)
 
 if not apply the patch will not work with compatibility layer, only working at windows
