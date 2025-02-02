@@ -9,14 +9,28 @@
     <Toast position="bottom-right" group="br" />
     <ConfirmDialog></ConfirmDialog>
   </NuxtLayout>
-  <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2763884853307133"
-    crossorigin="anonymous"></script>
-
 </template>
 <script setup>
 import "primeflex/primeflex.css"
 import Toast from "primevue/toast";
+
+useHead({
+  link: [
+    {
+      href: "https://unpkg.com/primeflex@latest/primeflex.css",
+      tagPosition: "head",
+      rel: 'stylesheet'
+    }
+  ],
+  script: [
+    {
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2763884853307133",
+      crossorigin: "anonymous",
+      tagPosition: 'head'
+    }
+
+  ]
+})
 </script>
 
 <style>
