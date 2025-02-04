@@ -41,5 +41,4 @@ export default defineNuxtConfig({
       preprocessorMaxWorkers: true // number of CPUs minus 1
     }
   }
-
 })

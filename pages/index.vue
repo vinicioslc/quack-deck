@@ -30,9 +30,9 @@
                 <Tag icon="pi pi-check" rounded></Tag>
                 Where Compatible:
               </p>
-              <span>
-                <div v-for="compat in game.compatibility"
-                  class="flex flex-row justify-content-start align-items-center mb-3 gap-2">
+              <div v-for="compat in game.compatibility"
+                class="flex flex-column justify-content-start align-items-start mb-3 gap-2">
+                <div class="flex flex-row">
                   <span>
                     <Tag v-if="compat.name === 'Razor1911'" icon="pi pi-code" rounded></Tag>
                     <Tag v-if="compat.name === 'Fitgirl'" icon="pi pi-user" rounded></Tag>
@@ -47,9 +47,18 @@
                     <Button :disabled="!compat.steamos" v-tooltip.top="compat.steamos ? 'Compatible' : 'Not Compatible'"
                       size="small" :label="'Steamos'" severity="help" icon="pi pi-discord" />
                   </div>
-
                 </div>
-              </span>
+                <div class="flex flex-row text-start ">
+                  <p v-if="compat?.proton_tested" class="mr-1">
+                    Proton Tested:
+                  </p>
+                  <div v-if="compat?.proton_tested" v-for="proton in compat.proton_tested"
+                    class="flex flex-column gap-2">
+                    <span> {{ proton }}</span>
+
+                  </div>
+                </div>
+              </div>
             </template>
             <template #content>
               <p class="m-0">

@@ -1,12 +1,12 @@
 ---
-slug: prototype2
-title: Prototype 2
-steam_appid: 115320
+slug: ac-origins
+title: Assassin's Creed® Origins
+steam_appid: 582160
 compatibility:
   - name: 'Fitgirl'
     windows: true
     steamos: true
-    proton_tested: [lutris-GE-Proton8-26-x86_64]
+    proton_tested: [ GE-Proton9-20 ]
 description:
 ---
 Only works at steamos if have grub patch available here [grub patch](https://github.com/pdx-rico/hogwarts-steamdeck-fix)
