@@ -42,12 +42,11 @@
                     <Tag v-if="compat.name === 'empress'" icon="pi pi-crown" rounded></Tag>
                     - {{ compat.name }}
                   </span>
-                  <div class="flex gap-2">
-
-                    <Button :disabled="!compat.windows" v-tooltip.top="compat.windows ? 'Compatible' : 'Not Compatible'"
-                      size="small" :label="'windows'" severity="info" icon="pi pi-microsoft" />
+                  <div class="flex gap-2 ml-2">
                     <Button :disabled="!compat.steamos" v-tooltip.top="compat.steamos ? 'Compatible' : 'Not Compatible'"
                       size="small" :label="'steamos'" severity="help" icon="pi pi-discord" />
+                    <Button :disabled="!compat.windows" v-tooltip.top="compat.windows ? 'Compatible' : 'Not Compatible'"
+                      size="small" :label="'windows'" severity="info" icon="pi pi-microsoft" />
                   </div>
                 </div>
                 <div class="flex flex-row text-start ">
