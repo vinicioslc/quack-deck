@@ -3,7 +3,7 @@ slug: prototype2
 title: Prototype 2
 steam_appid: 115320
 compatibility:
-  - name: 'Fitgirl'
+  - name: fitgirl
     windows: true
     steamos: true
     proton_tested: [lutris-GE-Proton8-26-x86_64]

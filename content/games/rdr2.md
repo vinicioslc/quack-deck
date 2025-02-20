@@ -3,7 +3,7 @@ slug: Red_Dead_Redemption_2
 title: Red Dead Redemption 2
 steam_appid: 1174180
 compatibility:
-  - name: 'Fitgirl'
+  - name: fitgirl
     windows: true
     steamos: true
     proton_tested: [wine-ge-7-33-x86_64]

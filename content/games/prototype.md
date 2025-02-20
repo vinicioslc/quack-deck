@@ -3,7 +3,7 @@ slug: prototype
 title: Prototype
 steam_appid: 10150
 compatibility:
-  - name: 'Fitgirl'
+  - name: fitgirl
     windows: true
     steamos: true
     proton_tested: [ 'Proton - Experimental' ]

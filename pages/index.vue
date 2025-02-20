@@ -34,18 +34,18 @@
                 class="flex flex-column justify-content-start align-items-start mb-3 gap-2">
                 <div class="flex flex-row">
                   <span>
-                    <Tag v-if="compat.name === 'Razor1911'" icon="pi pi-code" rounded></Tag>
-                    <Tag v-if="compat.name === 'Fitgirl'" icon="pi pi-user" rounded></Tag>
-                    <Tag v-if="compat.name === 'Steamrip'" icon="pi pi-download" rounded></Tag>
-                    <Tag v-if="compat.name === 'Empress'" icon="pi pi-crown" rounded></Tag>
+                    <Tag v-if="compat.name === 'razor1911'" icon="pi pi-code" rounded></Tag>
+                    <Tag v-if="compat.name === 'fitgirl'" icon="pi pi-user" rounded></Tag>
+                    <Tag v-if="compat.name === 'steamrip'" icon="pi pi-download" rounded></Tag>
+                    <Tag v-if="compat.name === 'empress'" icon="pi pi-crown" rounded></Tag>
                     - {{ compat.name }}
                   </span>
                   <div class="flex gap-2">
 
                     <Button :disabled="!compat.windows" v-tooltip.top="compat.windows ? 'Compatible' : 'Not Compatible'"
-                      size="small" :label="'Windows'" severity="info" icon="pi pi-microsoft" />
+                      size="small" :label="'windows'" severity="info" icon="pi pi-microsoft" />
                     <Button :disabled="!compat.steamos" v-tooltip.top="compat.steamos ? 'Compatible' : 'Not Compatible'"
-                      size="small" :label="'Steamos'" severity="help" icon="pi pi-discord" />
+                      size="small" :label="'steamos'" severity="help" icon="pi pi-discord" />
                   </div>
                 </div>
                 <div class="flex flex-row text-start ">

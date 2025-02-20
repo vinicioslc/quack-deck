@@ -3,10 +3,10 @@ slug: forza-horizon-5
 title: Forza Horizon 5
 steam_appid: 1551360
 compatibility:
-  - name: Fitgirl
+  - name: fitgirl
     windows: true
     steamos: false
-  - name: Empress
+  - name: empress
     windows: true
     steamos: true
 description:
