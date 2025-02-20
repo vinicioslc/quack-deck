@@ -36,6 +36,8 @@
                   <span>
                     <Tag v-if="compat.name === 'razor1911'" icon="pi pi-code" rounded></Tag>
                     <Tag v-if="compat.name === 'fitgirl'" icon="pi pi-user" rounded></Tag>
+                    <Tag v-if="compat.name === 'xatab'" icon="pi pi-user" rounded></Tag>
+                    <Tag v-if="compat.name === 'dodi'" icon="pi pi-user" rounded></Tag>
                     <Tag v-if="compat.name === 'steamrip'" icon="pi pi-download" rounded></Tag>
                     <Tag v-if="compat.name === 'empress'" icon="pi pi-crown" rounded></Tag>
                     - {{ compat.name }}
